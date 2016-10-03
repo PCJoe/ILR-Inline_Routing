@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ILR Test Page</title>
+<script src="core/ilr_object.js"></script>
+<script src="plugins/ilr_controller.js"></script>
+</head>
+<body>
+	<input 
+		type="button" 
+		id="home" 
+    	onClick="
+            $ilr.controller('r', 'mainDiv:module/form/view/home:id/45');
+		" 
+		value="Home"
+	/>
+	<input 
+		type="button" 
+		id="contact" 
+    	onClick="
+            $ilr.controller('s', 'sideBarDiv:module/form/view/home:id/45');
+       	" 
+		value="Contact"
+	/>
+	<input 
+		type="button" 
+		id="Multi" 
+    	onClick="
+            $ilr.controller('r', 'mainDiv:module/form/view/home:id/45//sideBarDiv:module/sidebar/view/menu:emp/457645');
+		" 
+		value="Multi"
+	/>
+	<input 
+		type="button" 
+		id="Multi" 
+    	onClick="
+            $ilr.controller('r', 'mainDiv:module/form/view/home:id/45/name/joe/surname/burns');
+		" 
+		value="Multi Properties"
+	/>
+</body>
+<script type="text/javascript">
+	$ilr.defaults([
+		['r', 'mainDiv:module/form/view/home:id/45']
+	]);
+/*	if($_GET[$ilr.uriVar]===undefined) 
+	{
+        //$ilr.controller('r', );
+	}
+    else
+    {
+        //$ilr.controller($_GET[$ilr.uriVar]);
+    }*/
+</script>
+</html>
